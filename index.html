@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script defer src="/bundle.js"></script></head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo List App</h1>
+    </header>
+    <main>
+      <aside>
+        <h2>Projects</h2>
+        <form id="projectForm">
+          <input type="text" id="projectName" placeholder="New Project" required>
+          <button type="submit"><i class="fas fa-plus"></i></button>
+        </form>
+        <div id="projectContainer"></div>
+      </aside>
+      <section>
+        <h2>Todos</h2>
+        <form id="todoForm">
+          <input type="text" id="todoTitle" placeholder="Title" required>
+          <input type="text" id="todoDescription" placeholder="Description">
+          <input type="date" id="todoDueDate" required>
+          <select id="todoPriority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit"><i class="fas fa-plus"></i></button>
+        </form>
+        <div id="todoContainer"></div>
+      </section>
+      <section id="todoDetailsContainer"></section>
+    </main>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
