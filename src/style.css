@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  aside, section {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  aside h2, section h2 {
+    margin-top: 0;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  form input, form select, form button {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add margin for better spacing on mobile */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1 1 100%; /* Make elements take full width on mobile */
+  }
+  
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex: 1 1 auto; /* Allow button to resize on mobile */
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  .project, .todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .project:hover, .todo:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .project button, .todo button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 16px;
+  }
+  
+  .project button:hover, .todo button:hover {
+    color: #000;
+  }
+  
+  .project button:focus, .todo button:focus {
+    outline: none;
+  }
+  
+  #todoDetailsContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #todoDetailsContainer h2 {
+    margin-top: 0;
+  }
+  
+  .low-priority {
+    border-left: 5px solid green;
+  }
+  
+  .medium-priority {
+    border-left: 5px solid orange;
+  }
+  
+  .high-priority {
+    border-left: 5px solid red;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (min-width: 768px) {
+    main {
+      flex-direction: row;
+    }
+  
+    aside, section {
+      flex: 1;
+      margin: 0 10px;
+    }
+  
+    form {
+      flex-wrap: nowrap; /* Disable wrapping on larger screens */
+    }
+  
+    form input, form select, form button {
+      flex: 1; /* Elements share available space equally */
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  
+    form button {
+      flex: 0 1 auto; /* Allow button to resize on larger screens */
+    }
+  
+    #todoDetailsContainer {
+      margin-top: 0;
+    }
+  }
